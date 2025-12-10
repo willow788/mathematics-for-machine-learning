@@ -1,0 +1,36 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+#defining the function
+def f(x,y):
+    return np.sin(np.sqrt(x**2 + y**2))
+
+#greating the grid
+x = np.linspace(-5,5,1000)
+y = np.linspace(-5, 5, 1000)
+X, Y = np.meshgrid(x, y)
+
+Z = f(X, Y)
+
+#plotting the 3D surface
+fig = plt.figure(figsize=(12,7))
+
+axis1 = fig.add_subplot(1,2,1, projection= '3d')
+axis1.plot_surface(X, Y, Z, cmap= 'rainbow_r', edgecolor= 'none')
+axis1.set_title('3D SURFACE')
+axis1.set_xlabel('X')
+axis1.set_ylabel('Y')
+axis1.set_zlabel('f(X, Y)')
+
+#plotting the contour plot
+axis2 = fig.add_subplot(1,2,2)
+contour = axis2.contour(X , Y, Z, cmap= 'rainbow')
+axis2.set_title('CONTOUR PLOT')
+axis2.set_xlabel('X')
+axis2.set_ylabel('Y')
+fig.colorbar(contour, ax=axis2)
+
+plt.tight_layout()
+plt.show()
+
