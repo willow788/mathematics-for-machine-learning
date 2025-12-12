@@ -1,0 +1,13 @@
+# Gradient Calculator (From Scratch)
+
+Computes numerical gradients for multivariable functions WITHOUT NumPy/SymPy.
+
+Usage:
+- Import `gradient` from `main.py`.
+- Provide a Python function `f(x0, x1, ..., xn)` and a point `[x0, x1, ..., xn]`.
+
+Example:
+```python
+from main import gradient
+def f(x, y): return x**2 + 3*x*y + y**2
+print(gradient(f, [1.0, 2.0]))  # approx [7.0, 5.0]
