@@ -1,0 +1,10 @@
+# Hessian Matrix (From Scratch)
+
+Numerical computation of the Hessian matrix for multivariable functions without external libraries.
+
+The Hessian captures second-order curvature information and is essential for:
+- Newton's Method
+- Convexity analysis
+- Optimization theory
+
+Central difference schemes are used for all derivatives.
