@@ -1,0 +1,89 @@
+COLORED LINEAR TRANSFORMATION VISUALIZER
+=======================================
+
+This project visualizes the geometric effect of a 2x2 matrix on points
+in 2D space. All linear algebra operations are implemented from scratch
+using basic Python lists and loops. Matplotlib is used solely for
+visualization.
+
+--------------------------------------------------
+1. Matrix–Vector Multiplication
+--------------------------------------------------
+The function matvec(A, x) computes the product of a 2x2 matrix and a
+2D vector.
+
+Mathematical definition:
+If
+A = [[a, b],
+     [c, d]]
+and
+x = [x, y]
+
+Then:
+Ax = [a*x + b*y,
+      c*x + d*y]
+
+This function directly implements the formula without using any
+external numerical libraries.
+
+--------------------------------------------------
+2. Grid Generation
+--------------------------------------------------
+The generate_grid(n) function creates a square grid of integer
+coordinate points such that:
+
+-n ≤ x ≤ n and -n ≤ y ≤ n
+
+These points represent the original geometric structure before
+transformation.
+
+--------------------------------------------------
+3. Applying the Linear Transformation
+--------------------------------------------------
+Each point p in the grid is transformed using:
+p' = A · p
+
+The apply_transformation function applies this operation to every
+point independently and stores the results.
+
+--------------------------------------------------
+4. Visualization
+--------------------------------------------------
+Matplotlib is used only to plot the results.
+
+- Original points are displayed in one color.
+- Transformed points are displayed in another color.
+- Coordinate axes are shown for reference.
+- Equal scaling is enforced to preserve geometry.
+
+This visualization provides an intuitive understanding of how
+linear transformations affect shapes.
+
+--------------------------------------------------
+5. Experimentation
+--------------------------------------------------
+By modifying matrix A, different transformations can be visualized:
+
+Identity:
+[[1, 0],
+ [0, 1]]
+
+Scaling:
+[[2, 0],
+ [0, 1]]
+
+Rotation (90 degrees):
+[[0, -1],
+ [1,  0]]
+
+Shear:
+[[1, 1],
+ [0, 1]]
+
+--------------------------------------------------
+Conclusion
+--------------------------------------------------
+This project demonstrates a geometric interpretation of linear algebra
+and shows how matrices act on vectors in space. Implementing the math
+from scratch reinforces conceptual understanding while visualization
+enhances intuition.
