@@ -1,0 +1,117 @@
+EXPLANATION OF MATRIX OPERATIONS CODE
+====================================
+
+This project implements fundamental linear algebra matrix operations from scratch
+using only native Python data structures (lists and loops). No external numerical
+libraries such as NumPy are used. The goal is to demonstrate a clear understanding
+of how matrix computations work internally.
+
+--------------------------------------------------
+Matrix Representation
+--------------------------------------------------
+A matrix is represented as a list of lists, where each inner list corresponds to
+one row of the matrix.
+
+Example:
+A = [[1, 2],
+     [3, 4]]
+
+Here, A has 2 rows and 2 columns.
+
+--------------------------------------------------
+1. shape(A)
+--------------------------------------------------
+Returns the dimensions of matrix A.
+
+Implementation:
+- len(A) gives the number of rows.
+- len(A[0]) gives the number of columns.
+
+This function is used by all other operations to ensure correct iteration over
+matrix elements.
+
+--------------------------------------------------
+2. Matrix Addition: 
+--------------------------------------------------
+Performs element-wise addition of two matrices A and B.
+
+Mathematical definition:
+(A + B)ij = Aij + Bij
+
+Implementation details:
+- Iterates through each row and column.
+- Adds corresponding elements from A and B.
+- Stores the result in a new matrix.
+
+Both matrices must have the same dimensions.
+
+--------------------------------------------------
+3. Matrix Subtraction:
+--------------------------------------------------
+Performs element-wise subtraction of matrix B from matrix A.
+
+Mathematical definition:
+(A − B)ij = Aij − Bij
+
+Implementation is identical to matrix addition, except subtraction is used.
+
+--------------------------------------------------
+4. Scalar Multiplication: 
+--------------------------------------------------
+Multiplies every element of matrix A by a scalar value k.
+
+Mathematical definition:
+(kA)ij = k · Aij
+
+The shape of the matrix remains unchanged.
+
+--------------------------------------------------
+5. Transpose:
+--------------------------------------------------
+Computes the transpose of matrix A by converting rows into columns.
+
+Mathematical definition:
+(AT)ij = Aji
+
+Implementation details:
+- Outer loop iterates over columns of A.
+- Inner loop iterates over rows of A.
+- Each column of A becomes a row in the transposed matrix.
+
+--------------------------------------------------
+6. Matrix-Vector Multiplication: 
+--------------------------------------------------
+Multiplies a matrix A with a vector x.
+
+Mathematical definition:
+(Ax)i = Σj Aij xj
+
+Implementation details:
+- Each row of A is dotted with vector x.
+- Produces a new vector with length equal to the number of rows of A.
+
+--------------------------------------------------
+7. Matrix-Matrix Multiplication: matmul(A, B)
+--------------------------------------------------
+Computes the product of two matrices A and B.
+
+Dimension rule:
+Number of columns in A must equal number of rows in B.
+
+Mathematical definition:
+(AB)ij = Σk Aik Bkj
+
+Implementation details:
+- Uses three nested loops:
+  - Outer loop over rows of A.
+  - Middle loop over columns of B.
+  - Inner loop performs the summation over index k.
+- Builds the resulting matrix row by row.
+
+--------------------------------------------------
+Conclusion
+--------------------------------------------------
+These matrix operations form the foundation of linear algebra and are critical for
+understanding optimization algorithms, machine learning models, and numerical
+methods. Implementing them from scratch provides insight into how high-level
+numerical libraries operate internally.
