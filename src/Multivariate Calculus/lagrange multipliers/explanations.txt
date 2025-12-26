@@ -1,1 +1,38 @@
+This work applies the method of Lagrange multipliers to find the constrained extrema of the function
 
+f(x, y) = x² + 2y² − 2x
+
+subject to the constraint
+
+x² + y² = 4.
+
+The constraint restricts (x, y) to lie on a circle of radius 2 centered at the origin. Since we are not optimizing over all of ℝ² but only over the points on this circle, classical unconstrained optimization does not apply. Instead, the method of Lagrange multipliers is used.
+
+The key theoretical idea is that at a constrained extremum, the gradient of the objective function must be parallel to the gradient of the constraint function. If we define
+
+g(x, y) = x² + y² − 4,
+
+then the constraint surface is given by g(x, y) = 0, and the Lagrange multiplier condition is
+
+∇f(x, y) = λ ∇g(x, y),
+
+together with
+
+g(x, y) = 0.
+
+The gradients are computed as
+
+∇f(x, y) = [2x − 2, 4y]
+∇g(x, y) = [2x, 2y].
+
+Substituting these into the Lagrange multiplier equation yields the system
+
+2x − 2 = 2λx
+4y = 2λy
+x² + y² = 4.
+
+This nonlinear system is solved numerically in the code using the `fsolve` routine from SciPy. Several different initial guesses are supplied to ensure that multiple distinct solutions are located. The solutions are filtered to remove duplicates caused by numerical effects. For each resulting point (x, y), the corresponding Lagrange multiplier λ and the function value f(x, y) are reported.
+
+The program also visualizes the optimization problem. A contour plot of the function f(x, y) is generated, displaying lines of constant function value. The constraint x² + y² = 4 is plotted as a circle superimposed on the contour plot. The computed critical points are marked on this circle. This visualization illustrates an important geometric interpretation of Lagrange multipliers: at an extremum under constraint, the level curve of the function is tangent to the constraint curve. This tangency implies that the gradients of the function and the constraint are parallel.
+
+By evaluating the function at each critical point, the constrained minimum and maximum values can be identified. These correspond to the lowest and highest values of f(x, y) that occur along the circle x² + y² = 4. Thus, the combination of analytical reasoning, numerical solving, and visualization provides a complete treatment of the constrained optimization problem.
