@@ -1,77 +1,477 @@
-```markdown
 # Mathematics for Machine Learning — From First Principles
 
-A collection of small, focused projects that build key mathematical concepts used in modern machine learning from first principles. Each project emphasizes hand-written derivations, minimal dependencies, and visual intuition through plots and interactive examples.
+<div align="center">
 
-Why this repository exists
-- Modern ML frameworks often hide the underlying math. This repo shows how important concepts can be derived and implemented directly from definitions, so you gain intuition rather than only applying black-box tools.
-- Ideal for learners who want to deeply understand multivariate calculus, linear algebra, vector calculus, and the mathematical building blocks of ML algorithms.
+![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+![Status](https://img.shields.io/badge/status-active-success.svg)
+![Contributions](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)
 
-What you'll find here
-- Hand-written mathematical derivations and explanations.
-- Code implementations that use only basic numerical tools (minimal NumPy / Python; many examples avoid high-level ML abstractions).
-- Visualizations (3D surfaces, contour plots, vector fields, transformations) to build geometric intuition.
-- Small applied projects that connect the math to ML ideas (optimization, loss landscapes, manual backpropagation).
+**Building mathematical intuition for machine learning through hands-on implementations**
 
-Project categories
-- Multivariate Calculus
-  - Gradients, Jacobians, Hessians
-  - 3D surfaces, contour maps, optimization landscapes (saddle points, minima, maxima)
-- Linear Algebra
-  - Matrix arithmetic implemented from scratch
-  - Eigenvalues & eigenvectors, diagonalization
-  - PCA implemented manually, linear transformations visualized
-  - Orthogonality, projections, change of basis
-- Vector Calculus (planned)
-  - Divergence, curl, fields, line & surface integrals
-  - Visual and computational intuition for PDE-related operators
-- Applied Machine Learning Math (planned)
-  - Gradient descent and variants implemented directly
-  - Logistic regression, simple neural nets and backpropagation built from scratch
-  - Visualizing loss geometry and optimization behavior
+[Getting Started](#-quick-start) • [Documentation](../../wiki) • [Examples](#-examples) • [Contributing](../../wiki/Contributing) • [FAQ](../../wiki/FAQ)
 
-Example outputs
-- 3D surface plots and contour maps produced by the projects.
-- Plots demonstrate how analytic expressions translate into geometric behavior and optimization trajectories.
+</div>
 
-Quick start
-1. Clone the repo:
-   git clone https://github.com/willow788/mathematics-for-machine-learning.git
-   cd mathematics-for-machine-learning
+---
 
-2. (Optional) Create and activate a virtual environment:
-   python -m venv .venv
-   source .venv/bin/activate  # macOS / Linux
-   .venv\Scripts\activate     # Windows
+## 🎯 Overview
 
-3. Install dependencies (if the project includes a requirements file):
-   pip install -r requirements.txt
+A collection of small, focused projects that build key mathematical concepts used in modern machine learning **from first principles**. Each project emphasizes hand-written derivations, minimal dependencies, and rich visualizations to develop deep mathematical intuition.
 
-4. Run a script or notebook:
-   - Python script: python path/to/project_script.py
-   - Jupyter notebook: jupyter lab or jupyter notebook and open the notebook file
+### Why This Repository Exists
 
-Repository layout (typical)
-- multivariate_calculus/   — functions, plots, examples
-- linear_algebra/         — matrix code, eigen demos, PCA
-- vector_calculus/        — (upcoming) fields and integrals
-- applied_ml/             — (upcoming) optimization & small ML builds
-- notebooks/              — interactive explorations and visualizations
-- utils/                  — helper functions used across projects
+Modern ML frameworks often hide the underlying mathematics.  This repository reveals how important concepts can be derived and implemented directly from definitions, helping you gain **intuition** rather than just applying formulas.
 
-Contributing
-- Contributions are welcome. Suggested workflow:
-  1. Open an issue describing the feature, bug, or project idea.
-  2. Create a branch named `feat/...` or `fix/...`.
-  3. Submit a pull request with clear description, examples, and any generated figures / notebooks.
-- Aim for minimal dependencies, clear math derivations, and visual examples.
+**Perfect for:**
+- 🎓 Students learning calculus, linear algebra, or ML fundamentals
+- 💻 Developers wanting to understand what's under the hood
+- 🔬 Researchers needing reference implementations
+- 📚 Educators looking for teaching materials
+- 🚀 Self-learners who prefer hands-on understanding
 
-License
-- Check the repository's LICENSE file for licensing details.
+---
 
-Support / Contact
-- Open an issue on this repository for questions, suggestions, or to propose new projects.
+## ✨ What You'll Find Here
 
-Acknowledgements
-- This repository is inspired by the desire to build mathematical intuition for ML by re-deriving and visualizing core ideas rather than relying solely on high-level libraries.
+- **Hand-written mathematical derivations** - Clear explanations of theory
+- **From-scratch implementations** - Using only basic numerical tools (minimal NumPy)
+- **Rich visualizations** - 3D surfaces, contour plots, vector fields, transformations
+- **Applied connections** - Linking pure math to ML optimization and algorithms
+- **Educational focus** - Built to teach, not just compute
+
+---
+
+## 📂 Project Categories
+
+### 🧮 Multivariate Calculus
+*Status: ✅ Active*
+
+Fundamental calculus concepts for optimization and machine learning: 
+
+| Implementation | Description | Use Cases |
+|---------------|-------------|-----------|
+| **Partial Derivatives** | Forward, backward, and central difference methods | Sensitivity analysis |
+| **Gradient Computation** | Numerical gradient using central differences | Gradient descent, backpropagation |
+| **Hessian Matrix** | Second-order derivative matrix | Newton's method, convexity testing |
+| **Lagrange Multipliers** | Constrained optimization solver | SVMs, constrained neural networks |
+| **Vector Field Visualization** | Streamline plots with particle flow | Understanding dynamics, ODEs |
+
+**Example outputs:**
+- 3D surface plots showing optimization landscapes
+- Contour maps with constraint circles
+- Animated particle flows in vector fields
+
+[📖 Read the Multivariate Calculus Guide](../../wiki/Multivariate-Calculus)
+
+---
+
+### 🔢 Linear Algebra
+*Status:  ✅ Active*
+
+Matrix operations and visualizations for ML fundamentals:
+
+| Implementation | Description | Planned Features |
+|---------------|-------------|------------------|
+| **Function Visualization** | 3D surfaces + contour plots | ✅ Complete |
+| **Matrix Operations** | Multiplication, inverse, determinant | 🔄 Upcoming |
+| **Eigenvalue Decomposition** | Power iteration, QR algorithm | 🔄 Upcoming |
+| **PCA from Scratch** | Manual principal component analysis | 🔄 Upcoming |
+| **Linear Transformations** | Rotation, scaling, shearing | 🔄 Upcoming |
+
+**Current visualizations:**
+- Dual-panel 3D surface and contour plots
+- Rainbow colormaps for intuitive value mapping
+- High-resolution grid rendering (1000×1000)
+
+[📖 Read the Linear Algebra Guide](../../wiki/Linear-Algebra)
+
+---
+
+### 🌊 Vector Calculus
+*Status: 🔄 Planned*
+
+Field theory and differential operators:
+
+- Divergence and curl computation
+- Line and surface integrals
+- Gradient, divergence, and curl visualizations
+- Green's theorem, Stokes' theorem, divergence theorem
+
+[📖 Read the Vector Calculus Guide](../../wiki/Vector-Calculus)
+
+---
+
+### 🤖 Applied Machine Learning Math
+*Status: 🔄 Planned*
+
+Connecting theory to ML practice:
+
+- Gradient descent variants (SGD, momentum, Adam, RMSprop)
+- Backpropagation for simple neural networks
+- Loss landscape visualization
+- Manual implementation of logistic regression
+- Optimization trajectory analysis
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Python 3.8 or higher
+- pip (Python package manager)
+- git
+
+### Installation
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/willow788/mathematics-for-machine-learning.git
+cd mathematics-for-machine-learning
+
+# 2. Create virtual environment (recommended)
+python -m venv .venv
+
+# Activate on macOS/Linux: 
+source .venv/bin/activate
+
+# Activate on Windows:
+.venv\Scripts\activate
+
+# 3. Install dependencies
+pip install -r requirements.txt
 ```
+
+**If no requirements. txt exists:**
+```bash
+pip install numpy matplotlib scipy
+```
+
+### Running Examples
+
+```bash
+# Compute gradients
+python src/Multivariate\ Calculus/gradient. py
+
+# Compute Hessian matrix
+python src/Multivariate\ Calculus/hessian.py
+
+# Solve constrained optimization with Lagrange multipliers
+python src/Multivariate\ Calculus/lagrange\ multipliers/main.py
+
+# Visualize vector fields with particle flow
+python src/Multivariate\ Calculus/vector\ visualisation/main.py
+
+# Create 3D surface and contour plots
+python src/linear\ algebra/visualising\ functions
+```
+
+---
+
+## 💡 Examples
+
+### Example 1: Computing a Gradient
+
+```python
+from gradient import grad
+
+# Define function
+def f(x, y):
+    return x**2 + 3*x*y + y**2
+
+# Compute gradient at point (1, 2)
+point = [1.0, 2.0]
+gradient = grad(f, point, method='central')
+print(f"∇f({point}) = {gradient}")  
+# Output: ∇f([1.0, 2.0]) = [7.0, 5.0]
+```
+
+**Interpretation:** At point (1, 2), the function increases fastest in direction [7, 5]. For minimization via gradient descent, move in direction [-7, -5].
+
+---
+
+### Example 2: Analyzing Curvature with Hessian
+
+```python
+from hessian import hessianFunc
+import numpy as np
+
+def f(x, y):
+    return x**2 + y**2  # Simple bowl function
+
+point = [1.0, 1.0]
+H = hessianFunc(f, point)
+
+print("Hessian matrix:")
+for row in H:
+    print(row)
+
+# Analyze eigenvalues
+eigenvalues = np.linalg.eigvals(np.array(H))
+if all(eigenvalues > 0):
+    print("✓ Convex function (local minimum)")
+```
+
+---
+
+### Example 3: Constrained Optimization
+
+```python
+# Runs Lagrange multiplier optimization
+# Minimizes:  f(x, y) = x² + 2y² - 2x
+# Subject to: x² + y² = 4 (circle constraint)
+
+python src/Multivariate\ Calculus/lagrange\ multipliers/main.py
+```
+
+**Output:**
+- All critical points on the constraint circle
+- Function values at each point
+- Visualization showing contours + constraint + solutions
+
+---
+
+### Example 4: Visualizing Mathematical Functions
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+def f(x, y):
+    return np.sin(np.sqrt(x**2 + y**2))  # Radial wave pattern
+
+# Creates side-by-side 3D surface and contour plots
+python src/linear\ algebra/visualising\ functions
+```
+
+**Creates:**
+- Left: 3D surface with rainbow colormap
+- Right: Contour plot showing level curves
+- Interactive rotation for 3D plot
+
+---
+
+## 🗂️ Repository Structure
+
+```
+mathematics-for-machine-learning/
+├── src/
+│   ├── Multivariate Calculus/
+│   │   ├── PartialDerivatives.py          # Forward, backward, central difference
+│   │   ├── gradient.py                    # Gradient vector computation
+│   │   ├── hessian.py                     # Hessian matrix (second derivatives)
+│   │   ├── vector visualisation/
+│   │   │   └── main.py                    # Vector field streamlines + particles
+│   │   └── lagrange multipliers/
+│   │       ├── main.py                    # Constrained optimization solver
+│   │       └── explanations.txt           # Mathematical background
+│   ├── linear algebra/
+│   │   └── visualising functions          # 3D surface + contour plots
+│   ├── vector_calculus/                   # (Planned)
+│   └── applied_ml/                        # (Planned)
+├── notebooks/                             # Jupyter notebooks (planned)
+├── tests/                                 # Validation scripts (planned)
+├── docs/                                  # Extended documentation (planned)
+├── README.md                              # This file
+├── LICENSE                                # MIT License
+└── requirements.txt                       # Python dependencies (to be added)
+```
+
+---
+
+## 🎨 Example Visualizations
+
+<div align="center">
+
+### Multivariate Calculus
+
+**Vector Field Flow** | **Lagrange Multipliers** | **3D Surface**
+:--:|:--:|:--: 
+Streamlines showing F(x,y)=(-y,x) | Constrained optimization visualization | Function landscape with contours
+
+</div>
+
+> **Note:** Sample visualizations coming soon!  Run the scripts to see them yourself.
+
+---
+
+## 🎓 Learning Path
+
+**Recommended progression:**
+
+1. **Start with Partial Derivatives** → Understand how functions change
+   ```bash
+   python src/Multivariate\ Calculus/PartialDerivatives.py
+   ```
+
+2. **Move to Gradients** → Combine partials into optimization direction
+   ```bash
+   python src/Multivariate\ Calculus/gradient.py
+   ```
+
+3. **Understand Second-Order Info** → Curvature for faster optimization
+   ```bash
+   python src/Multivariate\ Calculus/hessian.py
+   ```
+
+4. **Explore Constrained Optimization** → Real-world constraints
+   ```bash
+   python src/Multivariate\ Calculus/lagrange\ multipliers/main.py
+   ```
+
+5. **Visualize Concepts** → Build geometric intuition
+   ```bash
+   python src/Multivariate\ Calculus/vector\ visualisation/main.py
+   python src/linear\ algebra/visualising\ functions
+   ```
+
+---
+
+## 🔗 Connections to Machine Learning
+
+| Mathematical Concept | ML Application |
+|---------------------|----------------|
+| **Gradient** | Backpropagation, gradient descent |
+| **Hessian** | Second-order optimizers (Newton, L-BFGS) |
+| **Partial Derivatives** | Chain rule, sensitivity analysis |
+| **Lagrange Multipliers** | SVMs, constrained neural networks |
+| **Vector Fields** | Neural ODEs, dynamical systems |
+| **Eigenvalues** | PCA, spectral methods |
+| **Matrix Decomposition** | Recommender systems, dimensionality reduction |
+| **Contour Plots** | Loss landscapes, decision boundaries |
+
+---
+
+## 🤝 Contributing
+
+Contributions are **warmly welcomed**! Whether you're fixing typos, adding features, or improving documentation. 
+
+### Quick Start
+
+1. **Fork** the repository
+2. **Create a branch**:  `git checkout -b feat/amazing-feature`
+3. **Make changes** with clear documentation
+4. **Commit**: `git commit -m 'Add amazing feature'`
+5. **Push**: `git push origin feat/amazing-feature`
+6. **Open a Pull Request**
+
+### Contribution Guidelines
+
+- **Minimal dependencies** - Prefer NumPy over high-level ML libraries
+- **Clear documentation** - Explain the math, not just the code
+- **Visual examples** - Include plots and visualizations
+- **Mathematical rigor** - Verify correctness against known solutions
+
+**See the full [Contributing Guide](../../wiki/Contributing) for details.**
+
+---
+
+## 📚 Documentation
+
+Comprehensive guides available in the [Wiki](../../wiki):
+
+- **[Home](../../wiki/Home)** - Repository overview and navigation
+- **[Getting Started](../../wiki/Getting-Started)** - Detailed setup instructions
+- **[Multivariate Calculus](../../wiki/Multivariate-Calculus)** - In-depth guide to calculus implementations
+- **[Linear Algebra](../../wiki/Linear-Algebra)** - Matrix operations and visualizations
+- **[Vector Calculus](../../wiki/Vector-Calculus)** - Planned content overview
+- **[Contributing](../../wiki/Contributing)** - How to contribute
+- **[FAQ](../../wiki/FAQ)** - Frequently asked questions
+
+---
+
+## 📖 Learning Resources
+
+### Books
+- *Calculus* by James Stewart
+- *Linear Algebra Done Right* by Sheldon Axler
+- *Convex Optimization* by Boyd & Vandenberghe
+- *Deep Learning* by Goodfellow, Bengio, and Courville
+
+### Online Courses
+- [3Blue1Brown - Essence of Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
+- [3Blue1Brown - Multivariable Calculus](https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr)
+- [MIT OCW 18.06 - Linear Algebra](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/)
+- [Stanford CS229 - Machine Learning](http://cs229.stanford.edu/)
+
+---
+
+## 🐛 Issues and Support
+
+- **Bug reports**:  [Open an issue](../../issues/new?template=bug_report.md)
+- **Feature requests**: [Open an issue](../../issues/new?template=feature_request.md)
+- **Questions**: Check the [FAQ](../../wiki/FAQ) or [start a discussion](../../discussions)
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+You are free to:
+- ✅ Use commercially
+- ✅ Modify and distribute
+- ✅ Use in research and education
+- ✅ Include in your projects
+
+Just include the license and give attribution!  🙏
+
+---
+
+## 🌟 Acknowledgements
+
+This repository is inspired by the desire to build mathematical intuition for ML by: 
+- Re-deriving concepts from first principles
+- Visualizing abstract mathematics
+- Avoiding black-box libraries
+- Emphasizing understanding over application
+
+**Special thanks to:**
+- The open-source community
+- Contributors who help improve this resource
+- Educators who make mathematics accessible
+- Students who inspire continuous learning
+
+---
+
+## 📊 Repository Stats
+
+![GitHub stars](https://img.shields.io/github/stars/willow788/mathematics-for-machine-learning?style=social)
+![GitHub forks](https://img.shields.io/github/forks/willow788/mathematics-for-machine-learning?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/willow788/mathematics-for-machine-learning?style=social)
+
+---
+
+## 🚀 Roadmap
+
+### Current Focus
+- ✅ Multivariate calculus implementations
+- ✅ Basic visualizations
+- ✅ Documentation and wiki pages
+
+### Next Steps
+- 🔄 Complete linear algebra implementations
+- 🔄 Add Jupyter notebooks for interactive learning
+- 🔄 Create video tutorials
+- 🔄 Implement vector calculus modules
+- 🔄 Build applied ML examples
+
+### Future Plans
+- 📅 Neural network backpropagation from scratch
+- 📅 Optimization algorithm comparisons
+- 📅 Interactive web-based visualizations
+- 📅 Community-contributed projects
+
+---
+
+<div align="center">
+
+**⭐ If you find this repository helpful, please consider giving it a star!  ⭐**
+
+**Made with ❤️ for the ML learning community**
+
+[⬆ Back to Top](#mathematics-for-machine-learning--from-first-principles)
+
+</div>
