@@ -9,7 +9,7 @@
 
 **Building mathematical intuition for machine learning through hands-on implementations**
 
-[Getting Started](#-quick-start) • [Documentation](../../wiki) • [Examples](#-examples) • [Contributing](../../wiki/Contributing) • [FAQ](../../wiki/FAQ)
+[Getting Started](#-quick-start) • [Documentation](../../wiki) • [Examples](#-examples) • [Contributing](../../wiki/Contributing) ��� [FAQ](../../wiki/FAQ)
 
 </div>
 
@@ -17,11 +17,12 @@
 
 ## 🎯 Overview
 
-A collection of small, focused projects that build key mathematical concepts used in modern machine learning **from first principles**. Each project emphasizes hand-written derivations, minimal dependencies, and rich visualizations to develop deep mathematical intuition.
+A collection of small, focused projects that build key mathematical concepts used in modern machine learning **from first principles**. Each project emphasizes hand-written derivations, minimal dependencies, and clear educational value.
 
 ### Why This Repository Exists
 
-Modern ML frameworks often hide the underlying mathematics.  This repository reveals how important concepts can be derived and implemented directly from definitions, helping you gain **intuition** rather than just applying formulas.
+Modern ML frameworks often hide the underlying mathematics.  
+This repository reveals how important concepts can be derived and implemented directly from definitions, helping you gain **intuition** and mathematical insight, not just code recipes.
 
 **Perfect for:**
 - 🎓 Students learning calculus, linear algebra, or ML fundamentals
@@ -47,65 +48,57 @@ Modern ML frameworks often hide the underlying mathematics.  This repository rev
 ### 🧮 Multivariate Calculus
 *Status: ✅ Active*
 
-Fundamental calculus concepts for optimization and machine learning: 
-
-| Implementation | Description | Use Cases |
-|---------------|-------------|-----------|
-| **Partial Derivatives** | Forward, backward, and central difference methods | Sensitivity analysis |
-| **Gradient Computation** | Numerical gradient using central differences | Gradient descent, backpropagation |
-| **Hessian Matrix** | Second-order derivative matrix | Newton's method, convexity testing |
-| **Lagrange Multipliers** | Constrained optimization solver | SVMs, constrained neural networks |
-| **Vector Field Visualization** | Streamline plots with particle flow | Understanding dynamics, ODEs |
+| Implementation      | Description                          | Use Cases           |
+|---------------------|--------------------------------------|---------------------|
+| **Partial Derivatives**    | Forward, backward, and central difference methods | Sensitivity analysis  |
+| **Gradient Computation**   | Numerical gradient using central differences      | Gradient descent, backpropagation |
+| **Hessian Matrix**         | Second-order derivative matrix                   | Newton's method, convexity testing |
+| **Lagrange Multipliers**   | Constrained optimization solver                  | SVMs, constrained neural networks |
+| **Vector Field Visualization** | Streamline plots with particle flow          | Understanding dynamics, ODEs |
 
 **Example outputs:**
 - 3D surface plots showing optimization landscapes
 - Contour maps with constraint circles
 - Animated particle flows in vector fields
 
-[📖 Read the Multivariate Calculus Guide](../../wiki/Multivariate-Calculus)
+[📖 Multivariate Calculus Guide](../../wiki/Multivariate-Calculus)
 
 ---
 
 ### 🔢 Linear Algebra
 *Status:  ✅ Active*
 
-Matrix operations and visualizations for ML fundamentals:
-
-| Implementation | Description | Planned Features |
-|---------------|-------------|------------------|
-| **Function Visualization** | 3D surfaces + contour plots | ✅ Complete |
-| **Matrix Operations** | Multiplication, inverse, determinant | 🔄 Upcoming |
-| **Eigenvalue Decomposition** | Power iteration, QR algorithm | 🔄 Upcoming |
-| **PCA from Scratch** | Manual principal component analysis | 🔄 Upcoming |
-| **Linear Transformations** | Rotation, scaling, shearing | 🔄 Upcoming |
+| Implementation           | Description                         | Planned Features              |
+|--------------------------|-------------------------------------|-------------------------------|
+| **Function Visualization**  | 3D surfaces + contour plots       | ✅ Complete                    |
+| **Matrix Operations**       | Multiplication, inverse, determinant | 🔄 Upcoming                |
+| **Eigenvalue Decomposition**| Power iteration, QR algorithm     | 🔄 Upcoming                    |
+| **PCA from Scratch**        | Manual principal component analysis | 🔄 Upcoming                    |
+| **Linear Transformations**  | Rotation, scaling, shearing       | 🔄 Upcoming                    |
 
 **Current visualizations:**
 - Dual-panel 3D surface and contour plots
 - Rainbow colormaps for intuitive value mapping
 - High-resolution grid rendering (1000×1000)
 
-[📖 Read the Linear Algebra Guide](../../wiki/Linear-Algebra)
+[📖 Linear Algebra Guide](../../wiki/Linear-Algebra)
 
 ---
 
 ### 🌊 Vector Calculus
 *Status: 🔄 Planned*
 
-Field theory and differential operators:
-
 - Divergence and curl computation
 - Line and surface integrals
 - Gradient, divergence, and curl visualizations
 - Green's theorem, Stokes' theorem, divergence theorem
 
-[📖 Read the Vector Calculus Guide](../../wiki/Vector-Calculus)
+[📖 Vector Calculus Guide](../../wiki/Vector-Calculus)
 
 ---
 
 ### 🤖 Applied Machine Learning Math
 *Status: 🔄 Planned*
-
-Connecting theory to ML practice:
 
 - Gradient descent variants (SGD, momentum, Adam, RMSprop)
 - Backpropagation for simple neural networks
@@ -143,7 +136,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-**If no requirements. txt exists:**
+**If no requirements.txt exists:**
 ```bash
 pip install numpy matplotlib scipy
 ```
@@ -152,7 +145,7 @@ pip install numpy matplotlib scipy
 
 ```bash
 # Compute gradients
-python src/Multivariate\ Calculus/gradient. py
+python src/Multivariate\ Calculus/gradient.py
 
 # Compute Hessian matrix
 python src/Multivariate\ Calculus/hessian.py
@@ -259,24 +252,24 @@ python src/linear\ algebra/visualising\ functions
 mathematics-for-machine-learning/
 ├── src/
 │   ├── Multivariate Calculus/
-│   │   ├── PartialDerivatives.py          # Forward, backward, central difference
-│   │   ├── gradient.py                    # Gradient vector computation
-│   │   ├── hessian.py                     # Hessian matrix (second derivatives)
+│   │   ├── PartialDerivatives.py
+│   │   ├── gradient.py
+│   │   ├── hessian.py
 │   │   ├── vector visualisation/
-│   │   │   └── main.py                    # Vector field streamlines + particles
+│   │   │   └── main.py
 │   │   └── lagrange multipliers/
-│   │       ├── main.py                    # Constrained optimization solver
-│   │       └── explanations.txt           # Mathematical background
+│   │       ├── main.py
+│   │       └── explanations.txt
 │   ├── linear algebra/
-│   │   └── visualising functions          # 3D surface + contour plots
-│   ├── vector_calculus/                   # (Planned)
-│   └── applied_ml/                        # (Planned)
-├── notebooks/                             # Jupyter notebooks (planned)
-├── tests/                                 # Validation scripts (planned)
-├── docs/                                  # Extended documentation (planned)
-├── README.md                              # This file
-├── LICENSE                                # MIT License
-└── requirements.txt                       # Python dependencies (to be added)
+│   │   └── visualising functions
+│   ├── vector_calculus/        # (Planned)
+│   └── applied_ml/             # (Planned)
+├── notebooks/                  # Jupyter notebooks (planned)
+├── tests/                      # Validation scripts (planned)
+├── docs/                       # Extended documentation (planned)
+├── README.md
+├── LICENSE
+└── requirements.txt
 ```
 
 ---
@@ -293,7 +286,7 @@ Streamlines showing F(x,y)=(-y,x) | Constrained optimization visualization | Fun
 
 </div>
 
-> **Note:** Sample visualizations coming soon!  Run the scripts to see them yourself.
+> **Note:** Sample visualizations coming soon! Run the scripts to see them yourself.
 
 ---
 
@@ -331,22 +324,22 @@ Streamlines showing F(x,y)=(-y,x) | Constrained optimization visualization | Fun
 
 ## 🔗 Connections to Machine Learning
 
-| Mathematical Concept | ML Application |
-|---------------------|----------------|
-| **Gradient** | Backpropagation, gradient descent |
-| **Hessian** | Second-order optimizers (Newton, L-BFGS) |
-| **Partial Derivatives** | Chain rule, sensitivity analysis |
+| Mathematical Concept    | ML Application              |
+|------------------------|-----------------------------|
+| **Gradient**           | Backpropagation, gradient descent |
+| **Hessian**            | Second-order optimizers (Newton, L-BFGS) |
+| **Partial Derivatives**| Chain rule, sensitivity analysis |
 | **Lagrange Multipliers** | SVMs, constrained neural networks |
-| **Vector Fields** | Neural ODEs, dynamical systems |
-| **Eigenvalues** | PCA, spectral methods |
+| **Vector Fields**      | Neural ODEs, dynamical systems |
+| **Eigenvalues**        | PCA, spectral methods |
 | **Matrix Decomposition** | Recommender systems, dimensionality reduction |
-| **Contour Plots** | Loss landscapes, decision boundaries |
+| **Contour Plots**      | Loss landscapes, decision boundaries |
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are **warmly welcomed**! Whether you're fixing typos, adding features, or improving documentation. 
+Contributions are **warmly welcomed**! Whether you're fixing typos, adding features, or improving documentation.
 
 ### Quick Start
 
@@ -398,7 +391,7 @@ Comprehensive guides available in the [Wiki](../../wiki):
 
 ---
 
-## 🐛 Issues and Support
+## 🐞 Issues and Support
 
 - **Bug reports**:  [Open an issue](../../issues/new?template=bug_report.md)
 - **Feature requests**: [Open an issue](../../issues/new?template=feature_request.md)
@@ -416,7 +409,7 @@ You are free to:
 - ✅ Use in research and education
 - ✅ Include in your projects
 
-Just include the license and give attribution!  🙏
+Just include the license and give attribution! 🙏
 
 ---
 
@@ -436,13 +429,7 @@ This repository is inspired by the desire to build mathematical intuition for ML
 
 ---
 
-## 📊 Repository Stats
-
-![GitHub stars](https://img.shields.io/github/stars/willow788/mathematics-for-machine-learning?style=social)
-![GitHub forks](https://img.shields.io/github/forks/willow788/mathematics-for-machine-learning?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/willow788/mathematics-for-machine-learning?style=social)
-
----
+<div align="center">
 
 ## 🚀 Roadmap
 
@@ -465,8 +452,6 @@ This repository is inspired by the desire to build mathematical intuition for ML
 - 📅 Community-contributed projects
 
 ---
-
-<div align="center">
 
 **⭐ If you find this repository helpful, please consider giving it a star!  ⭐**
 
